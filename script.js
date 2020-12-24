@@ -1,0 +1,1 @@
+let player = new Player('.text' , '.player01' , '.player02' , '.name')

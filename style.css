@@ -1,0 +1,87 @@
+.container{
+    width: 470px;
+    min-height: 400px;
+    background:  rgb(45, 14, 80) ;
+    border: solid 1px rgb(94, 68, 116);
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+}
+
+.btn{
+    width: 150px;
+    height: 150px;
+    background: rgb(61, 33, 94) ;
+    border: solid 1px white;
+    text-decoration: none;
+    color: white;
+    text-align: 50px;
+    
+}
+
+.btn:hover{
+    background: rgb(27, 12, 44) ;
+}
+
+.player01{
+    width: 440px;
+    height: 30px;
+    margin: auto;
+    background: rgb(61, 33, 94) ;
+    color: white;
+    border: solid 1px white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+.player02{
+    width: 440px;
+    height: 30px;
+    margin: auto;
+    background: rgb(61, 33, 94) ;
+    color: white;
+    border: solid 1px white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+}
+
+.text {
+    text-align: center;
+    color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.name{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.btnInit{
+    width: 440px;
+    height: 40px;
+    margin: auto;
+    background: rgb(30, 12, 51) ;
+    color: white;
+    border: solid 1px white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+}
