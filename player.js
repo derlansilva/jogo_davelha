@@ -7,13 +7,42 @@ class Player {
         this.nameP = document.querySelector(name)
         this.btnInit = document.querySelector('.btnInit')
         this.content = document.querySelector('.content')
-       
-        this.initBtn()
         
+        this.initBtn()
+        this.reloadPlayer()
+        this.revanche()
+
     }
 
+    reloadPlayer(){
+        let btnReinit = document.querySelector('.btnReiniciar')
+
+        btnReinit.addEventListener('click' , e => {
+
+            window.location.reload()
+
+        })
+
+    }
+
+
     displayPlayer(player){
-        this.text.innerHTML = `Jogador ${player} venceu`
+
+        this.text.innerHTML = `Jogador(a) ${player} venceu`
+
+        document.querySelector('.btnsInitRev').style.display = 'flex'
+
+    }
+
+    revanche(){
+
+        let btnRevanche = document.querySelector('.btnRevanche')
+
+        btnRevanche.addEventListener('click' , e  => {
+
+            this.initBtn()
+
+        })
     }
 
     getPlayer(valor , player){
@@ -110,11 +139,20 @@ class Player {
                 alert("precisa por os nomes dos jogadores")
             }else{
 
-                this.disabledDisplay()
-            
-                this.nameP.innerHTML = `${this.player01.value} `;
+                this.disabledDisplay();
 
                 [...document.querySelectorAll('.btn')].forEach((btn , index) => {
+
+                    
+                if(i==0){
+
+                    this.nameP.innerHTML = `${this.player01.value} Você começa`;
+                    
+                }else{
+
+                    this.nameP.innerHTML = `${this.player02.value} Você começa`;
+
+                }
     
                     btn.addEventListener('click' , event => {
    
@@ -143,11 +181,12 @@ class Player {
 
                                             this.getPlayer( btn.value , player)
 
-                                        }
-                                                    
+                                        }          
+
+                                        this.nameP.innerHTML = `${this.player02.value} sua vez`;
+
                                     }else{
                                         
-                
                                         let img = document.createElement('div')
 
                                         img.innerHTML = `<img src="./circulo.png" class="img" alt="">`
@@ -166,17 +205,14 @@ class Player {
 
                 
                                         }
+
+                                        this.nameP.innerHTML = `${this.player01.value} sua vez`;
                 
                                     }
                                 
             
                             }
             
-                        if(i > 9){
-
-                            alert('deu velha , ninguem ganhou')
-          
-                        }
                     })
                 })
 
